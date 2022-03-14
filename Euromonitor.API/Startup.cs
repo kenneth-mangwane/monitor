@@ -1,7 +1,12 @@
+using Euromonitor.BusinessObjects.Interfaces;
+using Euromonitor.BusinessObjects.Logic;
+using Euromonitor.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -19,6 +24,7 @@ namespace Euromonitor.API
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +32,17 @@ namespace Euromonitor.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionStringBuilder = new SqliteConnectionStringBuilder { DataSource = Configuration.GetConnectionString("DefaultConnection") };
+            var connectionString = connectionStringBuilder.ToString();
+            var connection = new SqliteConnection(connectionString);
+
+            services.AddDbContext<EuromonitorDbContext>(options =>
+            options.UseSqlite(
+            connection, b => b.MigrationsAssembly("Euromonitor.API")
+            ));
+
+            services.AddScoped<IBookLogic, BookLogic>();
+            services.AddScoped<ISubscriptionLogic, SubscriptionLogic>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

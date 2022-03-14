@@ -19,7 +19,7 @@ namespace Euromonitor.Data
         }
 
 
-        public DbQuery<Book> Books { get; set; }
-        public DbQuery<Subcription> Subcriptions { get; set; }
+        public DbSet<Book> Books { get; set; }
+        public DbSet<Subscription> Subcriptions { get; set; }
     }
 }

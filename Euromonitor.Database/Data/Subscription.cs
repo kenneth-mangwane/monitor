@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Euromonitor.Data
 {
-    public class Subcription : AuditBase<Guid>
+    public class Subscription : AuditBase<Guid>
     {
         public Guid BookId { get; set; }
         public int UserId { get; set; }

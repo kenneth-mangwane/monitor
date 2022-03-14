@@ -13,9 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{43
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Euromonitor.Database", "Euromonitor.Database\Euromonitor.Database.csproj", "{76058F0A-1EAB-49DF-86E9-0BEB52177D11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euromonitor.Common", "Euromonitor.Common\Euromonitor.Common.csproj", "{3090E508-ADC3-4E32-8F2B-2553842AC82E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Euromonitor.Common", "Euromonitor.Common\Euromonitor.Common.csproj", "{3090E508-ADC3-4E32-8F2B-2553842AC82E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euromonitor.Core", "Euromonitor.BusinessObjects\Euromonitor.Core.csproj", "{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Euromonitor.Core", "Euromonitor.BusinessObjects\Euromonitor.Core.csproj", "{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
