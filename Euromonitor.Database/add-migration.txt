@@ -1,0 +1,3 @@
+ dotnet ef  migrations add MigrationName -c SouthPointDbContext --project ../SouthPointMaintenance.Database/SPM.Database.csproj 
+dotnet ef ... 
+dotnet ef database update --context StaySouthPointDbContext

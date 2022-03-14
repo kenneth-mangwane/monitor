@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Euromonitor.API", "Euromonitor.API\Euromonitor.API.csproj", "{6517BD76-0899-4160-8072-36E68A67B31E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{94983804-407C-4E70-88E9-F3FDFA02BD62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{DBB820C6-7D1F-45A2-90A4-6577BDF7BC69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{43A4E0FB-4477-4DD3-8E6D-0741F179E185}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Euromonitor.Database", "Euromonitor.Database\Euromonitor.Database.csproj", "{76058F0A-1EAB-49DF-86E9-0BEB52177D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euromonitor.Common", "Euromonitor.Common\Euromonitor.Common.csproj", "{3090E508-ADC3-4E32-8F2B-2553842AC82E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euromonitor.Core", "Euromonitor.BusinessObjects\Euromonitor.Core.csproj", "{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6517BD76-0899-4160-8072-36E68A67B31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6517BD76-0899-4160-8072-36E68A67B31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6517BD76-0899-4160-8072-36E68A67B31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6517BD76-0899-4160-8072-36E68A67B31E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76058F0A-1EAB-49DF-86E9-0BEB52177D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76058F0A-1EAB-49DF-86E9-0BEB52177D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76058F0A-1EAB-49DF-86E9-0BEB52177D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76058F0A-1EAB-49DF-86E9-0BEB52177D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3090E508-ADC3-4E32-8F2B-2553842AC82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3090E508-ADC3-4E32-8F2B-2553842AC82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3090E508-ADC3-4E32-8F2B-2553842AC82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3090E508-ADC3-4E32-8F2B-2553842AC82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6517BD76-0899-4160-8072-36E68A67B31E} = {94983804-407C-4E70-88E9-F3FDFA02BD62}
+		{76058F0A-1EAB-49DF-86E9-0BEB52177D11} = {43A4E0FB-4477-4DD3-8E6D-0741F179E185}
+		{3090E508-ADC3-4E32-8F2B-2553842AC82E} = {DBB820C6-7D1F-45A2-90A4-6577BDF7BC69}
+		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7} = {DBB820C6-7D1F-45A2-90A4-6577BDF7BC69}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A44376FC-DD4C-4880-BCAA-8BD176220448}
+	EndGlobalSection
+EndGlobal
