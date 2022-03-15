@@ -3,6 +3,7 @@ using Euromonitor.Data;
 using Euromonitor.Enums;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Euromonitor.BusinessObjects.Logic
@@ -21,21 +22,29 @@ namespace Euromonitor.BusinessObjects.Logic
             {
                 EuromonitorDbContext.Books.Add(book);
                 EuromonitorDbContext.SaveChanges();
+                return book;
+
             }
-            return book;
+            return null;
         }
         public Book UpdateBook(Guid bookId, Book _book)
         {
             var book = EuromonitorDbContext.Books.Find(bookId);
-            book.Name = string.IsNullOrEmpty(book.Name) ? _book.Name : book.Name;
-            book.Text = string.IsNullOrEmpty(book.Text) ? _book.Text : book.Text;
-            book.Price = book.Price <= 0 ? _book.Price : book.Price;
+            book.Name = string.IsNullOrEmpty(_book.Name) ? book.Name : _book.Name;
+            book.Text = string.IsNullOrEmpty(_book.Text) ? book.Text : _book.Text;
+            book.Price = _book.Price <= 0 ? book.Price : _book.Price;
+            EuromonitorDbContext.Books.Update(book);
+            EuromonitorDbContext.SaveChanges();
             return book;
         }
 
         public List<Book> GetBooks(int take = 10, int skip = 0)
         {
             return EuromonitorDbContext.Books.Take(take).Skip(skip).ToList(); ;
+        }
+        public List<Book> GetMyBooks(int userId, int take = 10, int skip = 0 )
+        {
+            return EuromonitorDbContext.Subcriptions.Include(s => s.Book).Where(s=>s.UserId==userId && s.State==(int)SubscriptionEnum.Subscribe).Select(s=>s.Book).Take(take).Skip(skip).ToList(); ;
         }
 
         public Book GetBook(Guid bookId)

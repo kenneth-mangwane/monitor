@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace Euromonitor.Common.Utilities
     {
         public static object Handle<T>(T data)
         {
-            if (data.GetType() == typeof(Exception))
+            if (data is Exception)
             {
                 return new { error = true, message = data?.ToString(), data };
             }

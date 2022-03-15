@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Euromonitor.Common", "Eurom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Euromonitor.Core", "Euromonitor.BusinessObjects\Euromonitor.Core.csproj", "{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Euromonitor.WebUI", "Euromonitor.WebUI\Euromonitor.WebUI.njsproj", "{56C687CF-E7BE-4C81-B69B-BA42A9732B11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56C687CF-E7BE-4C81-B69B-BA42A9732B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C687CF-E7BE-4C81-B69B-BA42A9732B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C687CF-E7BE-4C81-B69B-BA42A9732B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C687CF-E7BE-4C81-B69B-BA42A9732B11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{76058F0A-1EAB-49DF-86E9-0BEB52177D11} = {43A4E0FB-4477-4DD3-8E6D-0741F179E185}
 		{3090E508-ADC3-4E32-8F2B-2553842AC82E} = {DBB820C6-7D1F-45A2-90A4-6577BDF7BC69}
 		{7B4946A7-9383-4BF0-AEFB-FBF4B11B73B7} = {DBB820C6-7D1F-45A2-90A4-6577BDF7BC69}
+		{56C687CF-E7BE-4C81-B69B-BA42A9732B11} = {94983804-407C-4E70-88E9-F3FDFA02BD62}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A44376FC-DD4C-4880-BCAA-8BD176220448}

@@ -9,6 +9,7 @@ namespace Euromonitor.BusinessObjects.Interfaces
         public Book AddBook(Book book);
         public Book UpdateBook(Guid bookId, Book _book);
         public List<Book> GetBooks(int take = 10, int skip = 0);
+        public List<Book> GetMyBooks(int userId, int take = 10, int skip = 0);
         public Book GetBook(Guid bookId);
 
     }

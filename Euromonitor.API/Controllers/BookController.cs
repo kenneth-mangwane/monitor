@@ -23,7 +23,7 @@ namespace Euromonitor.API.Controllers
         }
 
         [HttpGet("{bookId}")]
-        public async Task<ActionResult<Subscription>> GetBook(Guid bookId)
+        public async Task<ActionResult<Book>> GetBook(Guid bookId)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace Euromonitor.API.Controllers
 
 
         [HttpGet("list")]
-        public async Task<ActionResult<List<Subscription>>> GetBooks(int limit=10, int skip =  0)
+        public async Task<ActionResult<List<Book>>> GetBooks(int limit=10, int skip =  0)
         {
             try
             {
@@ -48,9 +48,21 @@ namespace Euromonitor.API.Controllers
                 return BadRequest(ReturnHandler.Handle(eo));
             }
         }
+        [HttpGet("personal/list")]
+        public async Task<ActionResult<List<Book>>> GetMyBooks(int userId, int limit = 10, int skip = 0)
+        {
+            try
+            {
+                return Ok(ReturnHandler.Handle(bookLogic.GetMyBooks(userId,limit, skip)));
+            }
+            catch (Exception eo)
+            {
+                return BadRequest(ReturnHandler.Handle(eo));
+            }
+        }
 
         [HttpPost("add")]
-        public async Task<ActionResult<Subscription>> AddBook(Book book)
+        public async Task<ActionResult<Book>> AddBook(Book book)
         {
             try
             {
@@ -63,7 +75,7 @@ namespace Euromonitor.API.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult<Subscription>> UpdateBook(Guid bookId, Book book)
+        public async Task<ActionResult<Book>> UpdateBook(Guid bookId, Book book)
         {
             try
             {
